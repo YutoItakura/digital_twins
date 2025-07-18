@@ -2,8 +2,8 @@ const canvas = document.getElementById("renderCanvas");
 const engine = new BABYLON.Engine(canvas, true);
 
 const diseaseData = {
-  "Tree1": 1, 
-  "leaves1":1, // 軽度
+  "Tree1": 0.7,
+  "leaves1":0.7, // 軽度
   "Tree2": 0.5,// 中度
   "leaves2":0.5
 };
@@ -30,7 +30,7 @@ const createScene = async () => {
   const ground = BABYLON.MeshBuilder.CreateGround("ground", { width: 10, height: 10 }, scene);
 
   // GLB読み込み
-  await BABYLON.SceneLoader.AppendAsync("./", "Tree.glb", scene);
+  await BABYLON.SceneLoader.AppendAsync("./", "AppleTree.glb", scene);
   // GUIのセットアップ
   const advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
 
