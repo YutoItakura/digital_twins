@@ -5,7 +5,15 @@ const diseaseData = {
   "Tree1": 0.7,
   "leaves1":0.7, // 軽度
   "Tree2": 0.5,// 中度
-  "leaves2":0.5
+  "leaves2":0.5,
+  "Tree3": 0.9,// 重度
+  "leaves3":0.9,
+  "Tree4": 0.3,// 軽度
+  "leaves4":0.3,
+  "Tree5": 0.1,// 重度
+  "leaves5":0.1,
+  "Tree6": 0.2,// 軽度
+  "leaves6":0.2,
 };
 function getHeatmapColor(level) {
   // 緑 → 黄 → 赤（level: 0〜1）
@@ -57,7 +65,7 @@ const createScene = async () => {
     const labelLink = new BABYLON.GUI.Rectangle();
     advancedTexture.addControl(label);
     label.linkWithMesh(mesh);
-    label.linkOffsetY = -100; // ラベルをメッシュの上に少し浮かせる
+    label.linkOffsetY = -120; // ラベルをメッシュの上に少し浮かせる
 
     };
   if(mesh.name.startsWith("leaves")){
